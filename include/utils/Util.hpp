@@ -8,8 +8,6 @@
 
 #include "Result.hpp"
 
-// #define COMMON_LOG_DEBUG
-
 namespace utils::util {
 
     namespace helper {

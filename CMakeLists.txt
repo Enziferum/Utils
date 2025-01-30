@@ -28,7 +28,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         INTERFACE
         "$<INSTALL_INTERFACE:include>")
 
-if(COMMON_OS_WIN32)
+if(UTILS_OS_WINDOWS)
     target_compile_options(${PROJECT_NAME} PUBLIC "/Zc:__cplusplus")
 endif ()
 
