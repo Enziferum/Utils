@@ -1,6 +1,6 @@
-# Common
-![status](http://gitlab.rossi.ru/Necromant/spectr_common/badges/master/pipeline.svg?ignore_skipped=true)
-Common - Sum up base features.
+# Utils
+[![Utils Build](https://github.com/Enziferum/Utils/actions/workflows/ci.yml/badge.svg)](https://github.com/Enziferum/Utils/actions/workflows/ci.yml) \
+Utils - C++ code helpers for logging/debug features and some code wrappers like StringableEnum.
 
 ### Contents
  - StringConvertable Enum
