@@ -4,6 +4,7 @@
 #include <string>
 #include <unordered_map>
 #include <fstream>
+#include <vector>
 
 #include "Enum.hpp"
 #include "Result.hpp"
@@ -37,6 +38,19 @@ namespace utils {
 	struct key_formatter;
 
 	template<typename Key>
+    std::vector<std::string> check_config(InputConfig<Key>& config) {
+        std::vector<std::string> res;
+        const std::unordered_map<std::string, Key> types = key_formatter<Key>::makeTypes();
+        for(const auto& [key, value]: types) {
+            if(config.hasValue(value))
+                continue;
+            res.push_back(key);
+        }
+
+        return res;
+    }
+
+	template<typename Key>
 	Result<ConfigError> read_config(InputConfig<Key>& config, const std::string& config_path) {
 		const std::unordered_map<std::string, Key> types = key_formatter<Key>::makeTypes();
 
@@ -68,5 +82,6 @@ namespace utils {
 
 		return std::nullopt;
 	}
+
 
 } // namespace utils
