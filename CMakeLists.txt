@@ -29,7 +29,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         "$<INSTALL_INTERFACE:include>")
 
 if(UTILS_OS_WINDOWS)
-    target_compile_options(${PROJECT_NAME} PUBLIC "/Zc:__cplusplus")
+#    target_compile_options(${PROJECT_NAME} PUBLIC "/Zc:__cplusplus")
 endif ()
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${LIBS})
@@ -37,3 +37,4 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${LIBS})
 if(UTILS_BUILD_TESTS)
     add_subdirectory(tests)
 endif()
+
